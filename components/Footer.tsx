@@ -12,7 +12,7 @@ export function Footer() {
     <footer className="border-t border-line">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 sm:flex-row sm:items-start sm:justify-between">
         <div className="flex flex-col gap-2">
-          <span className="font-display text-lg font-semibold tracking-tight text-bone">
+          <span className="font-display text-2xl font-bold tracking-tight text-bone">
             LynxLogic
           </span>
           <p className="max-w-xs text-sm text-bone/60">

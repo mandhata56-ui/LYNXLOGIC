@@ -1,11 +1,19 @@
 import Link from "next/link";
 import { EyeGlint } from "@/components/EyeGlint";
 import { FadeUp } from "@/components/FadeUp";
+import { HeroGraphic } from "@/components/HeroGraphic";
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden border-b border-line">
-      <div className="mx-auto max-w-6xl px-6 py-32 sm:py-40">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -right-16 top-1/2 z-0 hidden h-[560px] w-[480px] -translate-y-1/2 lg:block"
+      >
+        <HeroGraphic />
+      </div>
+
+      <div className="relative z-10 mx-auto max-w-6xl px-6 py-32 sm:py-40">
         <FadeUp
           as="p"
           onMount

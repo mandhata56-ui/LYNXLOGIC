@@ -40,7 +40,7 @@ export function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <a
           href="#top"
-          className="font-display text-lg font-semibold tracking-tight text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
+          className="font-display text-2xl font-bold tracking-tight text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
         >
           LynxLogic
         </a>

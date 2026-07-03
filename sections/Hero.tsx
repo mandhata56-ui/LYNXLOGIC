@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { EyeGlint } from "@/components/EyeGlint";
 import { FadeUp } from "@/components/FadeUp";
 
@@ -35,12 +36,12 @@ export function Hero() {
         </FadeUp>
 
         <FadeUp as="div" onMount delay={0.3} className="mt-10">
-          <a
-            href="#contact"
+          <Link
+            href="/contact"
             className="inline-flex items-center rounded-[4px] border border-line px-6 py-3 text-sm font-medium text-bone transition-colors hover:border-amber hover:text-amber focus-visible:border-amber focus-visible:text-amber focus-visible:outline-none"
           >
             Book a call
-          </a>
+          </Link>
         </FadeUp>
       </div>
     </section>

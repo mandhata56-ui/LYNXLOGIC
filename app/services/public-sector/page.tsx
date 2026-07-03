@@ -99,7 +99,7 @@ export default function PublicSectorPage() {
 
           <div className="mt-10">
             <Link
-              href="/#contact"
+              href="/contact"
               className="inline-flex items-center rounded-[4px] border border-line px-6 py-3 text-sm font-medium text-bone transition-colors hover:border-amber hover:text-amber focus-visible:border-amber focus-visible:text-amber focus-visible:outline-none"
             >
               Request a briefing
@@ -193,7 +193,7 @@ export default function PublicSectorPage() {
             </p>
             <div className="mt-10">
               <Link
-                href="/#contact"
+                href="/contact"
                 className="inline-flex items-center rounded-[4px] border border-line px-6 py-3 text-sm font-medium text-bone transition-colors hover:border-amber hover:text-amber focus-visible:border-amber focus-visible:text-amber focus-visible:outline-none"
               >
                 Request a briefing

@@ -3,10 +3,10 @@
 import { useEffect, useState } from "react";
 
 const links = [
-  { href: "#services", label: "Services" },
-  { href: "#work", label: "Work" },
-  { href: "#about", label: "About" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#services", label: "Services" },
+  { href: "/#work", label: "Work" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Nav() {
@@ -56,7 +56,7 @@ export function Nav() {
             </a>
           ))}
           <a
-            href="#contact"
+            href="/contact"
             className="rounded-[4px] bg-amber px-4 py-2 font-body text-sm font-medium text-obsidian transition-colors hover:bg-amber/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-bone"
           >
             Book a call
@@ -115,7 +115,7 @@ export function Nav() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/contact"
               onClick={() => setMobileOpen(false)}
               className="inline-flex w-fit rounded-[4px] bg-amber px-4 py-2 font-body text-sm font-medium text-obsidian transition-colors hover:bg-amber/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-bone"
             >

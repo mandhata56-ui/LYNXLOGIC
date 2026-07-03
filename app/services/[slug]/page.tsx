@@ -4,7 +4,11 @@ import type { Metadata } from "next";
 import { getService, services } from "@/lib/services";
 
 export function generateStaticParams() {
-  return services.map((service) => ({ slug: service.slug }));
+  // "public-sector" has its own dedicated page (app/services/public-sector),
+  // so it's excluded from this generic stub.
+  return services
+    .filter((service) => service.slug !== "public-sector")
+    .map((service) => ({ slug: service.slug }));
 }
 
 export async function generateMetadata({

@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getCaseStudy, caseStudies } from "@/lib/caseStudies";
+import { buildMetadata } from "@/lib/seo";
 
 export function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
@@ -15,10 +16,11 @@ export async function generateMetadata({
   const { slug } = await params;
   const study = getCaseStudy(slug);
   if (!study) return {};
-  return {
+  return buildMetadata({
     title: `${study.title} — LynxLogic`,
     description: study.summary,
-  };
+    path: `/work/${study.slug}`,
+  });
 }
 
 export default async function CaseStudyPage({
@@ -36,12 +38,12 @@ export default async function CaseStudyPage({
         <div className="mx-auto max-w-6xl px-6 pb-24 pt-40 sm:pb-32 sm:pt-48">
           <Link
             href="/#work"
-            className="font-mono text-xs uppercase tracking-[0.15em] text-steel transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
+            className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
           >
             ← Work
           </Link>
 
-          <p className="mt-10 font-mono text-xs uppercase tracking-[0.2em] text-steel">
+          <p className="mt-10 font-mono text-xs uppercase tracking-[0.2em] text-steel-text">
             {study.eyebrow}
           </p>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-medium leading-[1.05] text-bone sm:text-6xl">

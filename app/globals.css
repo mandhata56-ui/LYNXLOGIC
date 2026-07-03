@@ -4,7 +4,8 @@
   /* Brand palette — deliberately not the default Tailwind grays/blues */
   --color-obsidian: #0b0e13; /* base canvas */
   --color-amber: #d9a441; /* signature accent — used sparingly */
-  --color-steel: #3e5c6b; /* secondary / data */
+  --color-steel: #3e5c6b; /* secondary / data — borders, backgrounds, icons only */
+  --color-steel-text: #71858e; /* steel tinted toward bone for 5:1 contrast on obsidian; use for any steel-colored text */
   --color-bone: #e7e5df; /* primary text */
   --color-line: #1c2128; /* hairline borders / dividers */
 
@@ -21,4 +22,34 @@ html {
 body {
   background: var(--color-obsidian);
   color: var(--color-bone);
+}
+
+/*
+ * CSS-only entrance animation for above-the-fold content (see FadeUp's
+ * onMount path). Runs independent of JS hydration so it doesn't delay LCP
+ * the way a JS-driven Framer Motion animation would on a slow device.
+ */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animate-fade-up {
+  animation-name: fade-up;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }

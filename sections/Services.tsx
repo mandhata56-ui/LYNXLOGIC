@@ -21,7 +21,7 @@ export function Services() {
   return (
     <section id="services" className="border-b border-line">
       <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
-        <FadeUp as="p" className="font-mono text-xs uppercase tracking-[0.2em] text-steel">
+        <FadeUp as="p" className="font-mono text-xs uppercase tracking-[0.2em] text-steel-text">
           Services
         </FadeUp>
         <FadeUp
@@ -45,11 +45,11 @@ export function Services() {
                 href={`/services/${service.slug}`}
                 className="group grid gap-4 rounded-[4px] py-10 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber sm:grid-cols-[80px_1fr_32px] sm:items-center sm:gap-10"
               >
-                <span className="font-mono text-sm text-steel">
+                <span className="font-mono text-sm text-steel-text">
                   {service.index}
                 </span>
                 <div>
-                  <h3 className="font-display text-2xl font-medium text-bone transition-colors group-hover:text-steel sm:text-3xl">
+                  <h3 className="font-display text-2xl font-medium text-bone transition-colors group-hover:text-steel-text sm:text-3xl">
                     {service.title}
                   </h3>
                   <p className="mt-3 max-w-2xl text-base text-bone/70">
@@ -58,7 +58,7 @@ export function Services() {
                 </div>
                 <span
                   aria-hidden="true"
-                  className="hidden font-mono text-lg text-steel transition-transform duration-300 group-hover:translate-x-1 sm:block"
+                  className="hidden font-mono text-lg text-steel-text transition-transform duration-300 group-hover:translate-x-1 sm:block"
                 >
                   →
                 </span>

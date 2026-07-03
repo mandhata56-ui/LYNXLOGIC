@@ -1,12 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { FadeUp } from "@/components/FadeUp";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "About — LynxLogic",
   description:
     "LynxLogic is the applied AI and IT consulting practice of Reliant Edge Software Solutions Private Limited, based in New Delhi and delivering globally.",
-};
+  path: "/about",
+});
 
 const facts = [
   { label: "Headquarters", value: "New Delhi, India" },
@@ -22,7 +24,7 @@ export default function AboutPage() {
         <div className="mx-auto max-w-6xl px-6 pb-20 pt-40 sm:pb-24 sm:pt-48">
           <FadeUp
             as="p"
-            className="font-mono text-xs uppercase tracking-[0.2em] text-steel"
+            className="font-mono text-xs uppercase tracking-[0.2em] text-steel-text"
           >
             About
           </FadeUp>
@@ -54,7 +56,7 @@ export default function AboutPage() {
           <div className="grid gap-x-10 gap-y-10 sm:grid-cols-3">
             {facts.map((fact) => (
               <div key={fact.label}>
-                <p className="font-mono text-xs uppercase tracking-[0.15em] text-steel">
+                <p className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text">
                   {fact.label}
                 </p>
                 <p className="mt-3 text-lg text-bone">{fact.value}</p>

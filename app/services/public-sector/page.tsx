@@ -1,12 +1,14 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { FadeUp } from "@/components/FadeUp";
+import { buildMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildMetadata({
   title: "Government & Public Sector Efficiency — LynxLogic",
   description:
     "LynxLogic partners with government departments and public agencies to reduce processing times, strengthen accountability, and deliver measurable, auditable results.",
-};
+  path: "/services/public-sector",
+});
 
 const outcomes = [
   {
@@ -65,7 +67,7 @@ export default function PublicSectorPage() {
         <div className="mx-auto max-w-6xl px-6 pb-20 pt-40 sm:pb-24 sm:pt-48">
           <Link
             href="/#services"
-            className="font-mono text-xs uppercase tracking-[0.15em] text-steel transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
+            className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
           >
             ← Services
           </Link>
@@ -73,7 +75,7 @@ export default function PublicSectorPage() {
           <FadeUp
             as="p"
             delay={0.05}
-            className="mt-10 font-mono text-xs uppercase tracking-[0.2em] text-steel"
+            className="mt-10 font-mono text-xs uppercase tracking-[0.2em] text-steel-text"
           >
             Government &amp; Public Sector
           </FadeUp>
@@ -117,7 +119,7 @@ export default function PublicSectorPage() {
           <div className="mt-12 grid gap-x-10 gap-y-12 sm:grid-cols-2">
             {outcomes.map((outcome) => (
               <div key={outcome.label} className="border-t border-line pt-6">
-                <p className="font-mono text-xs uppercase tracking-[0.15em] text-steel">
+                <p className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text">
                   {outcome.label}
                 </p>
                 <p className="mt-3 max-w-md text-base leading-relaxed text-bone/70">
@@ -166,7 +168,7 @@ export default function PublicSectorPage() {
           <div className="mt-12 grid gap-10 sm:grid-cols-3">
             {principles.map((principle) => (
               <div key={principle.label}>
-                <p className="font-mono text-xs uppercase tracking-[0.15em] text-steel">
+                <p className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text">
                   {principle.label}
                 </p>
                 <p className="mt-3 text-base leading-relaxed text-bone/70">

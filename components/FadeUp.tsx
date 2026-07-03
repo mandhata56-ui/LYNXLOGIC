@@ -1,16 +1,11 @@
-"use client";
+import type { CSSProperties, ReactNode } from "react";
+import { ScrollFadeUp } from "./ScrollFadeUp";
 
-import { motion, type Variants } from "framer-motion";
-import type { ElementType, ReactNode } from "react";
-
-const variants: Variants = {
-  hidden: { opacity: 0, y: 16 },
-  show: { opacity: 1, y: 0 },
-};
+type SupportedTag = "div" | "h1" | "h2" | "h3" | "p";
 
 interface FadeUpProps {
   children: ReactNode;
-  as?: ElementType;
+  as?: SupportedTag;
   delay?: number;
   duration?: number;
   className?: string;
@@ -20,8 +15,14 @@ interface FadeUpProps {
 
 /**
  * Baseline scroll/mount reveal used across the site for a single, consistent
- * entrance feel. Reduced-motion handling is global via MotionConfig in the
- * root layout, so this component doesn't need its own guard.
+ * entrance feel. Reduced-motion handling is global: this component uses a
+ * plain CSS animation (with its own prefers-reduced-motion override) for
+ * onMount content, and the scroll-triggered path defers to Framer Motion's
+ * MotionConfig in the root layout.
+ *
+ * onMount renders as a server component with a CSS-only animation so
+ * above-the-fold text paints without waiting on JS hydration — a
+ * JS-driven fade delayed LCP by ~3s on throttled mobile.
  */
 export function FadeUp({
   children,
@@ -31,19 +32,23 @@ export function FadeUp({
   className,
   onMount = false,
 }: FadeUpProps) {
-  const MotionTag = motion.create(as);
+  if (!onMount) {
+    return (
+      <ScrollFadeUp as={as} delay={delay} duration={duration} className={className}>
+        {children}
+      </ScrollFadeUp>
+    );
+  }
+
+  const Tag = as;
+  const style: CSSProperties = {
+    animationDuration: `${duration}s`,
+    animationDelay: `${delay}s`,
+  };
 
   return (
-    <MotionTag
-      className={className}
-      variants={variants}
-      initial="hidden"
-      {...(onMount
-        ? { animate: "show" }
-        : { whileInView: "show", viewport: { once: true, margin: "-80px" } })}
-      transition={{ duration, delay, ease: "easeOut" }}
-    >
+    <Tag className={`animate-fade-up ${className ?? ""}`} style={style}>
       {children}
-    </MotionTag>
+    </Tag>
   );
 }

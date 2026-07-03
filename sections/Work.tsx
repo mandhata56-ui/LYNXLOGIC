@@ -23,7 +23,7 @@ export function Work() {
       <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
         <FadeUp
           as="p"
-          className="font-mono text-xs uppercase tracking-[0.2em] text-steel"
+          className="font-mono text-xs uppercase tracking-[0.2em] text-steel-text"
         >
           Work
         </FadeUp>
@@ -49,7 +49,7 @@ export function Work() {
                 className="group flex h-full flex-col justify-between rounded-[4px] border border-line p-8 transition-all duration-300 hover:-translate-y-1 hover:border-steel/50 hover:shadow-[0_12px_30px_-18px_rgba(62,92,107,0.6)] focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
               >
                 <div>
-                  <p className="font-mono text-xs uppercase tracking-[0.15em] text-steel">
+                  <p className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text">
                     {study.eyebrow}
                   </p>
                   <h3 className="mt-4 font-display text-2xl font-medium leading-snug text-bone">
@@ -59,7 +59,7 @@ export function Work() {
                     {study.summary}
                   </p>
                 </div>
-                <span className="mt-8 flex items-center justify-between font-mono text-xs uppercase tracking-[0.15em] text-steel">
+                <span className="mt-8 flex items-center justify-between font-mono text-xs uppercase tracking-[0.15em] text-steel-text">
                   Read case study
                   <span
                     aria-hidden="true"

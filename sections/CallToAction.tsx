@@ -16,8 +16,8 @@ export function CallToAction() {
           delay={0.1}
           className="mx-auto mt-4 max-w-xl text-lg text-bone/70"
         >
-          Tell us what's slowing you down. We'll tell you what it would take
-          to fix it.
+          Tell us what&apos;s slowing you down. We&apos;ll tell you what it
+          would take to fix it.
         </FadeUp>
         <FadeUp as="div" delay={0.2} className="mt-10 flex justify-center">
           <Link

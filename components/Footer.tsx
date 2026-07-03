@@ -22,13 +22,13 @@ export function Footer() {
           </p>
           <a
             href="mailto:hello@lynxlogic.ai"
-            className="mt-1 w-fit font-mono text-xs text-steel transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
+            className="mt-1 w-fit font-mono text-xs text-steel-text transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
           >
             hello@lynxlogic.ai
           </a>
           <a
             href="tel:+919650658953"
-            className="w-fit font-mono text-xs text-steel transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
+            className="w-fit font-mono text-xs text-steel-text transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
           >
             +91 96506 58953
           </a>
@@ -48,7 +48,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-line px-6 py-6">
-        <p className="mx-auto max-w-6xl font-mono text-[11px] text-bone/40">
+        <p className="mx-auto max-w-6xl font-mono text-[11px] text-bone/60">
           © {year} Reliant Edge Software Solutions Private Limited. All
           rights reserved.
         </p>

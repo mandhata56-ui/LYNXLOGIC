@@ -45,7 +45,7 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <p className="font-mono text-sm text-steel" role="status">
+      <p className="font-mono text-sm text-steel-text" role="status">
         Message sent. We&apos;ll get back to you shortly.
       </p>
     );
@@ -56,7 +56,7 @@ export function ContactForm() {
       <div className="flex flex-col gap-2">
         <label
           htmlFor="name"
-          className="font-mono text-xs uppercase tracking-[0.15em] text-steel"
+          className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text"
         >
           Name
         </label>
@@ -73,7 +73,7 @@ export function ContactForm() {
       <div className="flex flex-col gap-2">
         <label
           htmlFor="email"
-          className="font-mono text-xs uppercase tracking-[0.15em] text-steel"
+          className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text"
         >
           Email
         </label>
@@ -90,7 +90,7 @@ export function ContactForm() {
       <div className="flex flex-col gap-2">
         <label
           htmlFor="message"
-          className="font-mono text-xs uppercase tracking-[0.15em] text-steel"
+          className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text"
         >
           Message
         </label>

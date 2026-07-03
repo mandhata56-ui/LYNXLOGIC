@@ -33,7 +33,7 @@ export function Process() {
       <div className="mx-auto max-w-6xl px-6 py-24 sm:py-32">
         <FadeUp
           as="p"
-          className="font-mono text-xs uppercase tracking-[0.2em] text-steel"
+          className="font-mono text-xs uppercase tracking-[0.2em] text-steel-text"
         >
           Process
         </FadeUp>
@@ -57,7 +57,7 @@ export function Process() {
                     style={{ width: "calc(100% - 2.25rem + 1.5rem)" }}
                   />
                 )}
-                <span className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-steel/40 bg-obsidian font-mono text-xs text-steel">
+                <span className="relative z-10 flex h-9 w-9 items-center justify-center rounded-full border border-steel/40 bg-obsidian font-mono text-xs text-steel-text">
                   {step.index}
                 </span>
                 <h3 className="mt-6 font-display text-lg font-medium text-bone">
@@ -73,7 +73,7 @@ export function Process() {
             {steps.map((step, i) => (
               <div key={step.index} className="flex gap-4">
                 <div className="flex flex-col items-center">
-                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-steel/40 font-mono text-xs text-steel">
+                  <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-steel/40 font-mono text-xs text-steel-text">
                     {step.index}
                   </span>
                   {i < steps.length - 1 && (

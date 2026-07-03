@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import { MotionConfig } from "framer-motion";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
+import { buildMetadata, SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
 const generalSans = localFont({
@@ -30,9 +31,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "LynxLogic — AI Automation & IT Consulting",
-  description:
-    "LynxLogic finds structure and efficiency inside messy business processes.",
+  metadataBase: new URL(SITE_URL),
+  ...buildMetadata({
+    title: "LynxLogic — AI Automation & IT Consulting",
+    description:
+      "LynxLogic finds structure and efficiency inside messy business processes.",
+    path: "/",
+  }),
 };
 
 export default function RootLayout({

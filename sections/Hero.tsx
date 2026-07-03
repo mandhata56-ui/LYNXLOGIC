@@ -9,7 +9,7 @@ export function Hero() {
         <FadeUp
           as="p"
           onMount
-          className="font-mono text-xs uppercase tracking-[0.2em] text-steel"
+          className="font-mono text-xs uppercase tracking-[0.2em] text-steel-text"
         >
           AI Automation — IT Consulting
         </FadeUp>

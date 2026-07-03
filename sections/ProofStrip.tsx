@@ -15,9 +15,11 @@ export function ProofStrip({ metrics }: ProofStripProps) {
     <section className="border-b border-line">
       <FadeUp
         as="div"
+        onMount
+        delay={0.4}
         className="mx-auto flex max-w-6xl flex-col gap-6 px-6 py-10 sm:flex-row sm:items-center sm:justify-between"
       >
-        <p className="font-mono text-sm text-bone/50">
+        <p className="font-mono text-sm text-bone/60">
           Trusted by teams in Australia and the United States.
         </p>
 
@@ -28,7 +30,7 @@ export function ProofStrip({ metrics }: ProofStripProps) {
                 <dt className="font-mono text-2xl text-bone">
                   {metric.value}
                 </dt>
-                <dd className="font-mono text-[11px] uppercase tracking-[0.15em] text-steel">
+                <dd className="font-mono text-[11px] uppercase tracking-[0.15em] text-steel-text">
                   {metric.label}
                 </dd>
               </div>

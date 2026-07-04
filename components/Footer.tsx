@@ -1,3 +1,5 @@
+import { LogoMark } from "@/components/LogoMark";
+
 const links = [
   { href: "/#services", label: "Services" },
   { href: "/#work", label: "Work" },
@@ -12,7 +14,8 @@ export function Footer() {
     <footer className="border-t border-line">
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-16 sm:flex-row sm:items-start sm:justify-between">
         <div className="flex flex-col gap-2">
-          <span className="font-display text-2xl font-bold tracking-tight text-bone">
+          <span className="flex items-center gap-2 font-display text-2xl font-bold tracking-tight text-bone">
+            <LogoMark size={26} />
             LynxLogic
           </span>
           <p className="max-w-xs text-sm text-bone/60">

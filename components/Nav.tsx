@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { LogoMark } from "@/components/LogoMark";
 
 const links = [
   { href: "/#services", label: "Services" },
@@ -40,8 +41,9 @@ export function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <a
           href="#top"
-          className="font-display text-2xl font-bold tracking-tight text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
+          className="flex items-center gap-2 font-display text-2xl font-bold tracking-tight text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
         >
+          <LogoMark size={26} />
           LynxLogic
         </a>
 

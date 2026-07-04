@@ -34,12 +34,25 @@ export default function Image() {
           LynxLogic
           <div
             style={{
-              width: 14,
-              height: 14,
-              borderRadius: "50%",
-              backgroundColor: "#D9A441",
+              width: 22,
+              height: 22,
+              borderRadius: 4,
+              border: "2px solid #E7E5DF",
+              transform: "rotate(45deg)",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
-          />
+          >
+            <div
+              style={{
+                width: 7,
+                height: 7,
+                borderRadius: "50%",
+                backgroundColor: "#D9A441",
+              }}
+            />
+          </div>
         </div>
         <div
           style={{

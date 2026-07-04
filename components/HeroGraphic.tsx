@@ -31,13 +31,13 @@ export function HeroGraphic() {
       className="h-full w-full"
       style={{
         maskImage:
-          "radial-gradient(circle at 65% 45%, black 35%, transparent 72%)",
+          "radial-gradient(circle at 65% 45%, black 55%, transparent 85%)",
         WebkitMaskImage:
-          "radial-gradient(circle at 65% 45%, black 35%, transparent 72%)",
+          "radial-gradient(circle at 65% 45%, black 55%, transparent 85%)",
       }}
     >
       {noise.map(([x, y], i) => (
-        <circle key={i} cx={x} cy={y} r={1.6} className="fill-bone/20" />
+        <circle key={i} cx={x} cy={y} r={2.2} className="fill-bone/35" />
       ))}
 
       {edges.map(([a, b], i) => {
@@ -50,8 +50,8 @@ export function HeroGraphic() {
             y1={y1}
             x2={x2}
             y2={y2}
-            className="stroke-steel-text/40"
-            strokeWidth={1}
+            className="stroke-steel-text/70"
+            strokeWidth={1.5}
           />
         );
       })}
@@ -61,9 +61,9 @@ export function HeroGraphic() {
           key={key}
           cx={x}
           cy={y}
-          r={3.5}
+          r={4.5}
           className="fill-obsidian stroke-steel-text"
-          strokeWidth={1.5}
+          strokeWidth={2}
         />
       ))}
     </svg>

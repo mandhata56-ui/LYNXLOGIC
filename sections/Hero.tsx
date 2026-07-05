@@ -8,7 +8,7 @@ export function Hero() {
     <section className="relative overflow-hidden border-b border-line">
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-8 top-1/2 z-0 hidden h-[600px] w-[520px] -translate-y-1/2 lg:block"
+        className="pointer-events-none absolute -right-4 top-1/2 z-0 hidden h-[760px] w-[680px] -translate-y-1/2 lg:block"
       >
         <HeroGraphic />
       </div>

@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { services } from "@/lib/services";
-import { caseStudies } from "@/lib/caseStudies";
 import { SITE_URL } from "@/lib/seo";
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -19,12 +18,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const workRoutes: MetadataRoute.Sitemap = caseStudies.map((study) => ({
-    url: `${SITE_URL}/work/${study.slug}`,
-    lastModified: now,
-    changeFrequency: "yearly",
-    priority: 0.7,
-  }));
-
-  return [...staticRoutes, ...serviceRoutes, ...workRoutes];
+  return [...staticRoutes, ...serviceRoutes];
 }

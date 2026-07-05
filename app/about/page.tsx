@@ -133,11 +133,6 @@ export default function AboutPage() {
             to a dark forest: find the structure that&apos;s already there,
             and make it visible.
           </p>
-          <p className="mt-6 text-lg leading-relaxed text-bone/70">
-            We work out of New Delhi with clients across Australia and the
-            United States, and stay small and senior on purpose — the people
-            who scope an engagement are the people who deliver it.
-          </p>
         </div>
       </section>
 

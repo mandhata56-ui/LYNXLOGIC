@@ -28,7 +28,7 @@ export function LogoMark({ size = 28, className = "" }: LogoMarkProps) {
         stroke="currentColor"
         strokeWidth="2"
       />
-      <circle cx="16" cy="16" r="3" fill="#D9A441" />
+      <circle cx="16" cy="16" r="3" fill="#F0A93B" />
     </svg>
   );
 }

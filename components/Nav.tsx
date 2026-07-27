@@ -40,9 +40,9 @@ export function Nav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-5">
         <a
           href="/"
-          className="flex items-center gap-2 font-display text-2xl font-bold tracking-tight text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
+          className="flex items-center gap-2.5 font-display text-3xl font-bold tracking-tight text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
         >
-          <LogoMark size={26} />
+          <LogoMark size={32} />
           LynxLogic
         </a>
 

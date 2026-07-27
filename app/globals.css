@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Brand palette — deliberately not the default Tailwind grays/blues */
-  --color-obsidian: #0b0e13; /* base canvas */
-  --color-amber: #d9a441; /* signature accent — used sparingly */
-  --color-steel: #3e5c6b; /* secondary / data — borders, backgrounds, icons only */
-  --color-steel-text: #71858e; /* steel tinted toward bone for 5:1 contrast on obsidian; use for any steel-colored text */
-  --color-bone: #e7e5df; /* primary text */
-  --color-line: #1c2128; /* hairline borders / dividers */
+  /* Warm monochrome + amber palette, synchronized to the hero. No blue. */
+  --color-obsidian: #0e0f0d; /* base canvas — matches hero */
+  --color-amber: #f0a93b; /* signature accent — used sparingly */
+  --color-steel: #6e6a60; /* warm-neutral structure — borders, nodes, lines, icons */
+  --color-steel-text: #a8a296; /* warm-neutral label/eyebrow text (7.5:1 on base) */
+  --color-bone: #f4f1ea; /* primary text — matches hero */
+  --color-line: #23241f; /* warm hairline borders / dividers */
 
-  /* Type roles */
-  --font-display: var(--font-general-sans);
-  --font-body: var(--font-inter);
-  --font-mono: var(--font-jetbrains-mono);
+  /* Type roles — synchronized to the hero */
+  --font-display: var(--font-space-grotesk);
+  --font-body: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
 }
 
 html {

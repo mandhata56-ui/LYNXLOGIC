@@ -1,32 +1,29 @@
 import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
-import localFont from "next/font/local";
+import { Space_Grotesk, IBM_Plex_Sans, IBM_Plex_Mono } from "next/font/google";
 import { MotionConfig } from "framer-motion";
 import { Nav } from "@/components/Nav";
 import { Footer } from "@/components/Footer";
 import { buildMetadata, SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
-const generalSans = localFont({
-  src: [
-    { path: "./fonts/GeneralSans-Regular.woff2", weight: "400", style: "normal" },
-    { path: "./fonts/GeneralSans-Medium.woff2", weight: "500", style: "normal" },
-    { path: "./fonts/GeneralSans-Semibold.woff2", weight: "600", style: "normal" },
-    { path: "./fonts/GeneralSans-Bold.woff2", weight: "700", style: "normal" },
-  ],
-  variable: "--font-general-sans",
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-space-grotesk",
   display: "swap",
 });
 
-const inter = Inter({
+const plexSans = IBM_Plex_Sans({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500"],
+  variable: "--font-plex-sans",
   display: "swap",
 });
 
-const jetbrainsMono = JetBrains_Mono({
+const plexMono = IBM_Plex_Mono({
   subsets: ["latin"],
-  variable: "--font-jetbrains-mono",
+  weight: ["400", "500"],
+  variable: "--font-plex-mono",
   display: "swap",
 });
 
@@ -48,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${generalSans.variable} ${inter.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${spaceGrotesk.variable} ${plexSans.variable} ${plexMono.variable} h-full antialiased`}
     >
       <body
         id="top"

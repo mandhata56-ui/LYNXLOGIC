@@ -2,11 +2,13 @@
 
 @theme inline {
   /* Warm monochrome + amber palette, synchronized to the hero. No blue. */
-  --color-obsidian: #0e0f0d; /* base canvas — matches hero */
-  --color-amber: #f0a93b; /* signature accent — used sparingly */
+  --color-obsidian: #0e0f0d; /* ink — base canvas */
+  --color-card: #161714; /* raised card surface on ink */
+  --color-amber: #f0a93b; /* signal — primary accent, CTAs, eyebrows */
+  --color-amber-deep: #b96d0a; /* amber on paper (Process eyebrow) for contrast */
   --color-steel: #6e6a60; /* warm-neutral structure — borders, nodes, lines, icons */
   --color-steel-text: #a8a296; /* warm-neutral label/eyebrow text (7.5:1 on base) */
-  --color-bone: #f4f1ea; /* primary text — matches hero */
+  --color-bone: #f4f1ea; /* paper — primary text on ink; Process bg */
   --color-line: #23241f; /* warm hairline borders / dividers */
 
   /* Type roles — synchronized to the hero */
@@ -51,5 +53,29 @@ body {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+}
+
+/* Slow "eye blink" on the logo mark's amber dot. */
+@keyframes lx-blink {
+  0%,
+  92% {
+    opacity: 1;
+  }
+  96% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.lx-logo-dot {
+  animation: lx-blink 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lx-logo-dot {
+    animation: none;
   }
 }

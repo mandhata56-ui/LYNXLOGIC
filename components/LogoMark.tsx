@@ -1,14 +1,16 @@
 interface LogoMarkProps {
   size?: number;
   className?: string;
+  /** Animate the amber dot with a slow eye-blink (nav/footer, not favicons). */
+  blink?: boolean;
 }
 
 /**
- * Portable brand mark: a faceted aperture with the amber glint at its
- * center — the same signature motif as the hero's eye-glint, distilled
- * into a shape that works standalone (favicon, social avatar, nav).
+ * Brand mark: a hairline square rotated 45° (an aperture) with the amber
+ * signal dot at its center — the "structure + signal" motif, distilled
+ * into a mark that works standalone.
  */
-export function LogoMark({ size = 28, className = "" }: LogoMarkProps) {
+export function LogoMark({ size = 30, className = "", blink = false }: LogoMarkProps) {
   return (
     <svg
       width={size}
@@ -19,16 +21,21 @@ export function LogoMark({ size = 28, className = "" }: LogoMarkProps) {
       className={className}
     >
       <rect
-        x="8"
-        y="8"
-        width="16"
-        height="16"
-        rx="2"
+        x="8.5"
+        y="8.5"
+        width="15"
+        height="15"
         transform="rotate(45 16 16)"
         stroke="currentColor"
-        strokeWidth="2"
+        strokeWidth="1.5"
       />
-      <circle cx="16" cy="16" r="3" fill="#F0A93B" />
+      <circle
+        cx="16"
+        cy="16"
+        r="4"
+        fill="#F0A93B"
+        className={blink ? "lx-logo-dot" : undefined}
+      />
     </svg>
   );
 }

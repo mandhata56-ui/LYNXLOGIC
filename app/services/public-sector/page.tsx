@@ -64,7 +64,7 @@ export default function PublicSectorPage() {
     <main className="flex-1">
       {/* Intro */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-6xl px-6 pb-20 pt-40 sm:pb-24 sm:pt-48">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 pb-20 pt-40 sm:pb-24 sm:pt-48">
           <Link
             href="/#services"
             className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
@@ -112,7 +112,7 @@ export default function PublicSectorPage() {
 
       {/* Outcome pillars */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
           <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
             What departments can expect
           </h2>
@@ -133,7 +133,7 @@ export default function PublicSectorPage() {
 
       {/* Focus areas */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
           <div className="grid gap-10 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] sm:gap-16">
             <div>
               <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
@@ -161,7 +161,7 @@ export default function PublicSectorPage() {
 
       {/* Principles */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
           <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
             How engagements are governed
           </h2>
@@ -182,7 +182,7 @@ export default function PublicSectorPage() {
 
       {/* Closing */}
       <section>
-        <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
           <div className="max-w-2xl">
             <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
               Confidentiality and data handling are treated as a baseline

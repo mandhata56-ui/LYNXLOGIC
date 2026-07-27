@@ -8,7 +8,7 @@ const publicSector = getService("public-sector")!;
 export function Services() {
   return (
     <section id="services" className="bg-obsidian">
-      <div className="mx-auto w-full max-w-[1280px] px-6 py-24 sm:px-14">
+      <div className="mx-auto w-full max-w-[1920px] px-6 py-24 sm:px-14">
         {/* Header row */}
         <FadeUp
           as="div"

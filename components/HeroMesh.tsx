@@ -67,8 +67,8 @@ export function HeroMesh({ className }: { className?: string }) {
         if (d.structured && d.col < COLS - 1) {
           const nx = (d.col + 1) * gx + gx / 2;
           const ny = d.row * gy + gy / 2;
-          ctx.strokeStyle = `rgba(244,241,234,${d.order * 0.1})`;
-          ctx.lineWidth = 0.5;
+          ctx.strokeStyle = `rgba(244,241,234,${d.order * 0.16})`;
+          ctx.lineWidth = 0.6;
           ctx.beginPath();
           ctx.moveTo(x, y);
           ctx.lineTo(nx, ny);
@@ -76,10 +76,10 @@ export function HeroMesh({ className }: { className?: string }) {
         }
 
         ctx.beginPath();
-        ctx.arc(x, y, d.structured ? 1.8 : 1.1, 0, Math.PI * 2);
+        ctx.arc(x, y, d.structured ? 2.1 : 1.3, 0, Math.PI * 2);
         ctx.fillStyle = d.amber
-          ? `rgba(240,169,60,${0.55 + d.order * 0.4})`
-          : `rgba(244,241,234,${0.1 + d.order * 0.3})`;
+          ? `rgba(240,169,60,${0.6 + d.order * 0.4})`
+          : `rgba(244,241,234,${0.14 + d.order * 0.42})`;
         ctx.fill();
       }
     };

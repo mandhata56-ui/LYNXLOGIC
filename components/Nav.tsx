@@ -37,7 +37,7 @@ export function Nav() {
           : "border-transparent bg-transparent"
       }`}
     >
-      <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between px-6 py-[22px] sm:px-14">
+      <div className="mx-auto flex w-full max-w-[1920px] items-center justify-between px-6 py-[22px] sm:px-14">
         <a
           href="/"
           className="flex items-center gap-2.5 font-display text-[21px] font-semibold tracking-[-0.01em] text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"

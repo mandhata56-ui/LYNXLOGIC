@@ -14,7 +14,7 @@ export function CallToAction() {
         }}
       />
 
-      <div className="relative z-10 mx-auto w-full max-w-[1280px] px-6 py-[120px] text-center sm:px-14">
+      <div className="relative z-10 mx-auto w-full max-w-[1920px] px-6 py-[120px] text-center sm:px-14">
         <FadeUp
           as="h2"
           className="mx-auto max-w-[720px] font-display text-4xl font-semibold leading-tight tracking-[-0.02em] text-bone sm:text-[52px]"

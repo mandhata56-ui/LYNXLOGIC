@@ -41,7 +41,7 @@ export default async function ServicePage({
     <main className="flex-1">
       {/* Intro */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 pb-20 pt-40 sm:pb-24 sm:pt-48">
+        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 pb-20 pt-40 sm:pb-24 sm:pt-48">
           <Link
             href="/#services"
             className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
@@ -87,7 +87,7 @@ export default async function ServicePage({
       {/* What this covers */}
       {service.covers && (
         <section className="border-b border-line">
-          <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
+          <div className="mx-auto max-w-[1920px] px-6 sm:px-14 py-20 sm:py-24">
             <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
               What this covers
             </h2>
@@ -108,7 +108,7 @@ export default async function ServicePage({
       {/* Who this is for */}
       {service.whoFor && (
         <section className="border-b border-line">
-          <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
+          <div className="mx-auto max-w-[1920px] px-6 sm:px-14 py-20 sm:py-24">
             <div className="max-w-2xl">
               <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
                 Who this is for
@@ -129,7 +129,7 @@ export default async function ServicePage({
 
       {/* Closing CTA */}
       <section>
-        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 py-20 sm:py-24">
           <div className="max-w-xl">
             <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
               Want to talk about your process?

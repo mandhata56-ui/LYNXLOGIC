@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
 });
 
 const facts = [
-  { label: "Headquarters", value: "New Delhi, India" },
+  { label: "Headquarters", value: "Noida, Uttar Pradesh, India" },
   { label: "Delivery", value: "Australia & the United States" },
   {
     label: "Focus",
@@ -72,7 +72,7 @@ export default function AboutPage() {
     <main className="flex-1">
       {/* Intro */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 pb-20 pt-40 sm:pb-24 sm:pt-48">
+        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 pb-20 pt-40 sm:pb-24 sm:pt-48">
           <FadeUp
             as="p"
             className="font-mono text-xs uppercase tracking-[0.2em] text-steel-text"
@@ -105,7 +105,7 @@ export default function AboutPage() {
 
       {/* Quick facts */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-16">
+        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 py-16">
           <div className="grid gap-x-10 gap-y-10 sm:grid-cols-3">
             {facts.map((fact) => (
               <div key={fact.label}>
@@ -138,7 +138,7 @@ export default function AboutPage() {
 
       {/* Values */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 py-20 sm:py-24">
           <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
             What we believe
           </h2>
@@ -159,7 +159,7 @@ export default function AboutPage() {
 
       {/* Working style */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 py-20 sm:py-24">
           <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
             How we work
           </h2>
@@ -180,7 +180,7 @@ export default function AboutPage() {
 
       {/* Service commitments */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 py-20 sm:py-24">
           <div className="grid gap-10 sm:grid-cols-[minmax(0,1fr)_minmax(0,1fr)] sm:gap-16">
             <div>
               <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
@@ -207,7 +207,7 @@ export default function AboutPage() {
 
       {/* Closing CTA */}
       <section>
-        <div className="mx-auto max-w-[1280px] px-6 sm:px-14 py-20 sm:py-24">
+        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 py-20 sm:py-24">
           <div className="max-w-xl">
             <h2 className="font-display text-2xl font-medium text-bone sm:text-3xl">
               Want to work with us?

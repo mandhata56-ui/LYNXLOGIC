@@ -26,7 +26,7 @@ const steps = [
 export function Process() {
   return (
     <section id="process" className="bg-bone text-obsidian">
-      <div className="mx-auto w-full max-w-[1280px] px-6 py-24 sm:px-14">
+      <div className="mx-auto w-full max-w-[1920px] px-6 py-24 sm:px-14">
         <FadeUp
           as="p"
           className="font-mono text-xs uppercase tracking-[0.14em] text-amber-deep"

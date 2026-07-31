@@ -19,6 +19,8 @@ export function ContactForm() {
       name: String(data.get("name") ?? ""),
       email: String(data.get("email") ?? ""),
       message: String(data.get("message") ?? ""),
+      // Honeypot: real users leave this empty; bots tend to fill it.
+      company: String(data.get("company") ?? ""),
     };
 
     try {
@@ -53,6 +55,18 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="flex flex-col gap-8">
+      {/* Honeypot — hidden from real users; bots that fill it are dropped. */}
+      <div aria-hidden="true" className="absolute h-0 w-0 overflow-hidden">
+        <label htmlFor="company">Company (leave blank)</label>
+        <input
+          id="company"
+          name="company"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+        />
+      </div>
+
       <div className="flex flex-col gap-2">
         <label
           htmlFor="name"

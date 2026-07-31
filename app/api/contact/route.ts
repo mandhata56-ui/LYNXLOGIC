@@ -4,6 +4,8 @@ interface ContactPayload {
   name?: string;
   email?: string;
   message?: string;
+  /** Honeypot: hidden field that only bots fill in. */
+  company?: string;
 }
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -17,6 +19,11 @@ export async function POST(request: Request) {
       { ok: false, error: "Invalid request body." },
       { status: 400 }
     );
+  }
+
+  // Honeypot tripped → silently accept and drop (don't tip off the bot).
+  if (body.company && body.company.trim() !== "") {
+    return NextResponse.json({ ok: true });
   }
 
   const name = body.name?.trim() ?? "";

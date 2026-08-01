@@ -11,11 +11,6 @@ interface ContactPayload {
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-// Lightweight version probe so we can confirm over HTTP which build is live.
-export async function GET() {
-  return NextResponse.json({ service: "contact", version: "autoreply-v3" });
-}
-
 async function sendEmail(apiKey: string, payload: Record<string, unknown>) {
   return fetch("https://api.resend.com/emails", {
     method: "POST",

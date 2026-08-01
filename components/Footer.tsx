@@ -9,7 +9,7 @@ export function Footer() {
 
   return (
     <footer className="relative overflow-hidden border-t border-bone/[0.08]">
-      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-9 px-[clamp(20px,5vw,64px)] pb-12 pt-[clamp(40px,6vw,64px)] sm:grid-cols-[2fr_1fr_1fr]">
+      <div className="relative z-10 mx-auto grid w-full max-w-[1536px] grid-cols-1 gap-9 px-[clamp(20px,5vw,64px)] pb-12 pt-[clamp(40px,6vw,64px)] sm:grid-cols-[2fr_1fr_1fr]">
         <div>
           <div className="mb-4 font-display text-[20px] font-semibold">LynxLogic</div>
           <p className="m-0 max-w-[38ch] text-[13.5px] leading-[1.7] text-[#8f8b80]">

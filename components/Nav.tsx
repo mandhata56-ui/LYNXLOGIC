@@ -23,7 +23,7 @@ export function Nav() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-bone/[0.08] bg-obsidian/[0.72] backdrop-blur-[14px]">
-      <div className="mx-auto flex h-[88px] w-full max-w-[1280px] items-center justify-between px-[clamp(20px,5vw,64px)]">
+      <div className="mx-auto flex h-[88px] w-full max-w-[1536px] items-center justify-between px-[clamp(20px,5vw,64px)]">
         <a
           href="/#top"
           className="flex items-center gap-[11px] font-display text-[19px] font-semibold tracking-[-0.01em] text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"

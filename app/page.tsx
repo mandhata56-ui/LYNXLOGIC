@@ -10,7 +10,7 @@ import { CallToAction } from "@/sections/CallToAction";
 export default function Home() {
   return (
     <main className="flex-1">
-      <div className="mx-auto w-full max-w-[1280px] px-[clamp(20px,5vw,64px)]">
+      <div className="mx-auto w-full max-w-[1536px] px-[clamp(20px,5vw,64px)]">
         <Hero />
         <TrustStrip />
         <Manifesto />

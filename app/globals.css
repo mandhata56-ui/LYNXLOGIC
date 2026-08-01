@@ -155,24 +155,24 @@ body {
 .lx-watermark {
   font-family: var(--font-display), sans-serif;
   font-weight: 700;
-  font-size: clamp(72px, 14vw, 260px);
-  line-height: 1.12;
-  letter-spacing: -0.03em;
+  font-size: clamp(88px, 18vw, 360px);
+  line-height: 1;
+  letter-spacing: -0.035em;
   white-space: nowrap;
   background-image:
     linear-gradient(
       100deg,
-      transparent 40%,
-      rgba(244, 241, 234, 0.34) 50%,
-      transparent 60%
+      transparent 38%,
+      rgba(244, 241, 234, 0.42) 50%,
+      transparent 62%
     ),
     linear-gradient(
       180deg,
-      rgba(233, 230, 221, 0.14) 0%,
-      rgba(168, 162, 150, 0.08) 34%,
-      rgba(226, 168, 63, 0.16) 60%,
-      rgba(226, 168, 63, 0.05) 78%,
-      rgba(12, 14, 13, 0) 100%
+      rgba(233, 230, 221, 0.24) 0%,
+      rgba(180, 179, 167, 0.14) 32%,
+      rgba(226, 168, 63, 0.28) 58%,
+      rgba(226, 168, 63, 0.12) 80%,
+      rgba(233, 230, 221, 0.06) 100%
     );
   background-size:
     220% 100%,

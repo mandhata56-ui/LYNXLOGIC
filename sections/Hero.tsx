@@ -1,66 +1,42 @@
 import Link from "next/link";
 import { HeroMesh } from "@/components/HeroMesh";
 
-const heroCss = `
-.lx-hero{position:relative;overflow:hidden;display:flex;align-items:center;min-height:88vh;padding:120px 0;background:#0E0F0D;color:#F4F1EA;border-bottom:1px solid rgba(244,241,234,.08);}
-.lx-hero__canvas{position:absolute;top:0;right:0;height:100%;width:66%;opacity:.95;pointer-events:none;display:block;z-index:0;}
-.lx-hero__mask{position:absolute;top:0;right:0;height:100%;width:66%;background:linear-gradient(90deg,#0E0F0D 6%,rgba(14,15,13,0) 56%);pointer-events:none;z-index:1;}
-.lx-hero__container{position:relative;z-index:2;width:100%;max-width:1920px;margin:0 auto;padding:0 56px;}
-.lx-hero__content{max-width:900px;}
-.lx-hero__eyebrow{display:flex;align-items:center;gap:12px;margin:0 0 30px;font-family:var(--font-plex-mono),monospace;font-weight:400;font-size:12.5px;letter-spacing:.14em;color:#F0A93B;}
-.lx-hero__rule{display:inline-block;width:22px;height:1px;background:#F0A93B;}
-.lx-hero__title{margin:0 0 28px;font-family:var(--font-space-grotesk),sans-serif;font-weight:600;font-size:clamp(40px,6vw,88px);line-height:1.02;letter-spacing:-.025em;text-wrap:balance;}
-.lx-hero__subhead{margin:0 0 40px;max-width:600px;font-family:var(--font-plex-sans),sans-serif;font-weight:400;font-size:20px;line-height:1.55;color:rgba(244,241,234,.68);}
-.lx-hero__actions{display:flex;gap:18px;flex-wrap:wrap;}
-.lx-hero__btn{display:inline-flex;align-items:center;font-family:var(--font-plex-mono),monospace;font-size:14px;text-decoration:none;transition:background-color .2s ease,border-color .2s ease,color .2s ease;}
-.lx-hero__btn--primary{font-weight:500;background:#F0A93B;color:#0E0F0D;padding:15px 26px;}
-.lx-hero__btn--primary:hover{background:#F4F1EA;}
-.lx-hero__btn--secondary{font-weight:400;color:rgba(244,241,234,.8);padding:15px 22px;border:1px solid rgba(244,241,234,.2);}
-.lx-hero__btn--secondary:hover{border-color:rgba(244,241,234,.5);}
-.lx-hero a:focus-visible{outline:2px solid #F0A93B;outline-offset:3px;}
-@media (max-width:768px){
-.lx-hero{min-height:auto;padding:128px 0 72px;align-items:flex-start;}
-.lx-hero__canvas,.lx-hero__mask{display:none;}
-.lx-hero__container{padding:0 24px;}
-.lx-hero__subhead{font-size:18px;}
-}
-`;
-
 export function Hero() {
   return (
-    <section className="lx-hero">
-      <style>{heroCss}</style>
+    <header className="relative flex min-h-[clamp(420px,64vh,760px)] items-center overflow-hidden py-[clamp(64px,10vw,150px)] pb-[clamp(60px,9vw,120px)]">
+      <div className="pointer-events-none absolute inset-y-0 left-[26%] right-[calc(50%_-_50vw)] z-0 hidden md:block">
+        <HeroMesh className="block h-full w-full" />
+      </div>
 
-      <HeroMesh className="lx-hero__canvas" />
-      <div className="lx-hero__mask" aria-hidden="true" />
-
-      <div className="lx-hero__container">
-        <div className="lx-hero__content">
-          <p className="lx-hero__eyebrow">
-            <span className="lx-hero__rule" aria-hidden="true" />
-            AI AUTOMATION · IT CONSULTING
-          </p>
-
-          <h1 className="lx-hero__title">
-            We find the structure hiding in the noise.
-          </h1>
-
-          <p className="lx-hero__subhead">
-            We rebuild the messy, manual processes that run your business into
-            automated systems that keep running — pairing applied AI with
-            senior IT consulting for teams that have outgrown duct tape.
-          </p>
-
-          <div className="lx-hero__actions">
-            <Link href="/contact" className="lx-hero__btn lx-hero__btn--primary">
-              Book a call →
-            </Link>
-            <Link href="/#process" className="lx-hero__btn lx-hero__btn--secondary">
-              See how we work
-            </Link>
-          </div>
+      <div className="animate-rise relative z-[2] max-w-[660px]">
+        <div className="mb-[26px] font-mono text-[13px] tracking-[0.2em] text-amber">
+          AI AUTOMATION · IT INTEGRATION · SENIOR CONSULTING
+        </div>
+        <h1 className="m-0 mb-[26px] text-balance font-display text-[clamp(38px,6vw,74px)] font-semibold leading-[1.01] tracking-[-0.026em]">
+          We find the structure hiding in the noise.
+        </h1>
+        <p className="m-0 mb-[38px] max-w-[53ch] text-[clamp(17px,2vw,20px)] leading-[1.62] text-[#b8b3a7]">
+          The manual steps, the tool-switching, the process that only works when
+          one person is at their desk — that&rsquo;s operational noise, and it
+          compounds quietly. We engineer it out: applied AI and senior IT
+          consulting that turn your loudest processes into systems that simply
+          run.
+        </p>
+        <div className="flex flex-wrap gap-[14px]">
+          <Link
+            href="/contact"
+            className="rounded-full bg-amber px-[26px] py-[15px] text-[15px] font-semibold text-obsidian transition-colors hover:bg-[#f0bd5e] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
+          >
+            Book a call →
+          </Link>
+          <Link
+            href="/#process"
+            className="rounded-full border border-bone/[0.22] px-[26px] py-[15px] text-[15px] text-bone transition-colors hover:border-amber hover:text-amber focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian"
+          >
+            See how we work
+          </Link>
         </div>
       </div>
-    </section>
+    </header>
   );
 }

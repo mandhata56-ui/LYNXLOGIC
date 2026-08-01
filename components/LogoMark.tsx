@@ -33,7 +33,7 @@ export function LogoMark({ size = 30, className = "", blink = false }: LogoMarkP
         cx="16"
         cy="16"
         r="4"
-        fill="#F0A93B"
+        fill="#E2A83F"
         className={blink ? "lx-logo-dot" : undefined}
       />
     </svg>

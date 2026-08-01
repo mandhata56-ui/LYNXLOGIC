@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme inline {
-  /* Warm monochrome + amber palette, synchronized to the hero. No blue. */
-  --color-obsidian: #0e0f0d; /* ink — base canvas */
-  --color-card: #161714; /* raised card surface on ink */
-  --color-amber: #f0a93b; /* signal — primary accent, CTAs, eyebrows */
-  --color-amber-deep: #b96d0a; /* amber on paper (Process eyebrow) for contrast */
+  /* Warm monochrome + amber palette, synchronized to the homepage design. No blue. */
+  --color-obsidian: #0c0e0d; /* ink — base canvas */
+  --color-card: #131614; /* raised card surface on ink */
+  --color-amber: #e2a83f; /* signal — primary accent, CTAs, eyebrows */
+  --color-amber-deep: #a97a1e; /* amber on paper (Manifesto eyebrow) for contrast */
   --color-steel: #6e6a60; /* warm-neutral structure — borders, nodes, lines, icons */
-  --color-steel-text: #a8a296; /* warm-neutral label/eyebrow text (7.5:1 on base) */
-  --color-bone: #f4f1ea; /* paper — primary text on ink; Process bg */
+  --color-steel-text: #b8b3a7; /* warm-neutral body/label text */
+  --color-bone: #e9e6dd; /* paper — primary text on ink; Manifesto/Process bg */
   --color-line: #23241f; /* warm hairline borders / dividers */
 
   /* Type roles — synchronized to the hero */
@@ -53,6 +53,157 @@ body {
     animation: none;
     opacity: 1;
     transform: none;
+  }
+}
+
+/*
+ * Homepage design motion — ported from the LynxLogic Home design.
+ * Hero headline rise, animated service glyphs, and the scroll-reveal used
+ * by most homepage sections. All gated behind prefers-reduced-motion.
+ */
+@keyframes lx-rise {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+@keyframes lx-flow {
+  0% {
+    transform: translateX(0);
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(20px);
+    opacity: 0.25;
+  }
+}
+@keyframes lx-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  50% {
+    transform: scale(1.55);
+    opacity: 1;
+  }
+}
+@keyframes lx-tw {
+  0%,
+  100% {
+    opacity: 0.22;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes lx-dash {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* Animated glyphs transform about their own centre. */
+.lx-g * {
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.animate-rise {
+  animation: lx-rise 0.7s ease both;
+}
+
+/* Scroll-reveal: hidden until the Reveal client component adds .is-in. */
+.lx-reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.lx-reveal.is-in {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise {
+    animation: none;
+  }
+  .lx-g * {
+    animation: none !important;
+  }
+  .lx-reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+/*
+ * Footer brand watermark — a giant, ghosted "LynxLogic" with a brushed-metal
+ * gradient clipped to the letterforms, an amber-lit lower edge, and a slow
+ * light sheen sweeping across it. Synced to the site palette.
+ */
+.lx-watermark {
+  font-family: var(--font-display), sans-serif;
+  font-weight: 700;
+  font-size: clamp(72px, 14vw, 260px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  white-space: nowrap;
+  background-image:
+    linear-gradient(
+      100deg,
+      transparent 40%,
+      rgba(244, 241, 234, 0.34) 50%,
+      transparent 60%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(233, 230, 221, 0.14) 0%,
+      rgba(168, 162, 150, 0.08) 34%,
+      rgba(226, 168, 63, 0.16) 60%,
+      rgba(226, 168, 63, 0.05) 78%,
+      rgba(12, 14, 13, 0) 100%
+    );
+  background-size:
+    220% 100%,
+    100% 100%;
+  background-position:
+    -60% 0,
+    0 0;
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: lx-sheen 7s ease-in-out infinite;
+}
+
+@keyframes lx-sheen {
+  0%,
+  100% {
+    background-position:
+      -60% 0,
+      0 0;
+  }
+  55% {
+    background-position:
+      160% 0,
+      0 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lx-watermark {
+    animation: none;
   }
 }
 

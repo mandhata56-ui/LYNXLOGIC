@@ -72,7 +72,7 @@ export default function AboutPage() {
     <main className="flex-1">
       {/* Intro */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 pb-20 pt-40 sm:pb-24 sm:pt-48">
+        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 pb-20 pt-16 sm:pb-24 sm:pt-24">
           <FadeUp
             as="p"
             className="font-mono text-xs uppercase tracking-[0.2em] text-steel-text"

@@ -41,7 +41,7 @@ export default async function ServicePage({
     <main className="flex-1">
       {/* Intro */}
       <section className="border-b border-line">
-        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 pb-20 pt-40 sm:pb-24 sm:pt-48">
+        <div className="mx-auto max-w-[1920px] px-6 sm:px-14 pb-20 pt-16 sm:pb-24 sm:pt-24">
           <Link
             href="/#services"
             className="font-mono text-xs uppercase tracking-[0.15em] text-steel-text transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"

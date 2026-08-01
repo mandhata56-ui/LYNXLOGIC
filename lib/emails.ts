@@ -31,7 +31,7 @@ export function autoReplyHtml(name: string): string {
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#0B0C0A;">
 <tr>
 <td align="center" style="padding:56px 20px;">
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:580px;margin:0 auto;background:#161714;border:1px solid rgba(244,241,234,0.08);border-top:3px solid #F0A93B;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:580px;margin:0 auto;background:#161714;border:1px solid rgba(244,241,234,0.08);border-top:3px solid #E2A83F;">
 <tr>
 <td style="padding:36px 44px 40px;">
 
@@ -51,7 +51,7 @@ export function autoReplyHtml(name: string): string {
 </table>
 </td>
 <td align="right" style="vertical-align:middle;">
-<span style="font-family:${font};font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#F0A93B;">Message received</span>
+<span style="font-family:${font};font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#E2A83F;">Message received</span>
 </td>
 </tr>
 </table>

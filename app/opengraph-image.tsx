@@ -49,7 +49,7 @@ export default function Image() {
                 width: 7,
                 height: 7,
                 borderRadius: "50%",
-                backgroundColor: "#F0A93B",
+                backgroundColor: "#E2A83F",
               }}
             />
           </div>

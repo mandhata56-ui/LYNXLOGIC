@@ -1,95 +1,90 @@
-import { LogoMark } from "@/components/LogoMark";
-
 const explore = [
   { href: "/#services", label: "Services" },
+  { href: "/#why", label: "Why us" },
   { href: "/#process", label: "Process" },
-  { href: "/about", label: "About" },
 ];
 
 export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="relative overflow-hidden border-t border-bone/8 bg-obsidian">
-      <div className="relative z-10">
-        <div className="mx-auto flex w-full max-w-[1920px] flex-col gap-12 px-6 pb-10 pt-[52px] sm:flex-row sm:justify-between sm:px-14">
-          {/* Brand + address */}
-          <div className="flex max-w-md flex-col gap-4">
-            <span className="flex items-center gap-2.5 font-display text-xl font-semibold tracking-[-0.01em] text-bone">
-              <LogoMark size={26} />
-              LynxLogic
-            </span>
-            <p className="text-[13.5px] leading-relaxed text-bone/50">
-              Reliant Edge Software Solutions Pvt. Ltd.
-              <br />
-              9th Floor, Tower C, Logix Cyber Park,
-              <br />
-              Industrial Area Phase 2, Noida,
-              <br />
-              Gautam Buddha Nagar, Uttar Pradesh 201309, India
-              <br />
-              Working with teams worldwide
-            </p>
+    <footer className="relative overflow-hidden border-t border-bone/[0.08]">
+      <div className="relative z-10 mx-auto grid w-full max-w-[1280px] grid-cols-1 gap-9 px-[clamp(20px,5vw,64px)] pb-12 pt-[clamp(40px,6vw,64px)] sm:grid-cols-[2fr_1fr_1fr]">
+        <div>
+          <div className="mb-4 font-display text-[20px] font-semibold">LynxLogic</div>
+          <p className="m-0 max-w-[38ch] text-[13.5px] leading-[1.7] text-[#8f8b80]">
+            Reliant Edge Software Solutions Pvt. Ltd.
+            <br />
+            9th Floor, Tower C, Logix Cyber Park,
+            <br />
+            Industrial Area Phase 2, Noida, U.P. 201309, India
+            <br />
+            <span className="text-[#b8b3a7]">Working with teams worldwide</span>
+          </p>
+        </div>
+
+        <div>
+          <div className="mb-4 font-mono text-[12px] uppercase tracking-[0.14em] text-[#7f7b70]">
+            Explore
           </div>
-
-          {/* Link columns */}
-          <div className="flex gap-16">
-            <div className="flex flex-col gap-3">
-              <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-bone/40">
-                Explore
-              </p>
-              {explore.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  className="text-sm text-bone/60 transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
-
-            <div className="flex flex-col gap-3">
-              <p className="font-mono text-[11px] uppercase tracking-[0.1em] text-bone/40">
-                Contact
-              </p>
+          <div className="flex flex-col gap-3 text-[14.5px] text-[#b8b3a7]">
+            {explore.map((link) => (
               <a
-                href="mailto:hello@lynxlogic.ai"
-                className="text-sm text-bone/60 transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
+                key={link.href}
+                href={link.href}
+                className="transition-colors hover:text-amber focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
               >
-                hello@lynxlogic.ai
+                {link.label}
               </a>
-              <a
-                href="tel:+919650658953"
-                className="text-sm text-bone/60 transition-colors hover:text-bone focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
-              >
-                +91 96506 58953
-              </a>
-            </div>
+            ))}
           </div>
         </div>
 
-        <div className="mx-auto w-full max-w-[1920px] px-6 pb-10 sm:px-14">
-          <p className="text-xs text-bone/35">
-            © {year} Reliant Edge Software Solutions Private Limited. All rights
-            reserved.
-          </p>
+        <div>
+          <div className="mb-4 font-mono text-[12px] uppercase tracking-[0.14em] text-[#7f7b70]">
+            Contact
+          </div>
+          <div className="flex flex-col gap-3 text-[14.5px] text-[#b8b3a7]">
+            <a
+              href="mailto:hello@lynxlogic.ai"
+              className="transition-colors hover:text-amber focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
+            >
+              hello@lynxlogic.ai
+            </a>
+            <a
+              href="tel:+919650658953"
+              className="transition-colors hover:text-amber focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-amber"
+            >
+              +91 96506 58953
+            </a>
+          </div>
+        </div>
+
+        <div className="col-span-full border-t border-bone/[0.06] pt-6 text-[12.5px] text-[#6b6862]">
+          © {year} Reliant Edge Software Solutions Private Limited. All rights
+          reserved.
         </div>
       </div>
 
-      {/* Large ghosted brand watermark. Anchored so the full wordmark —
-          including the y/g descenders — stays visible; it bleeds off the
-          top edge instead of clipping the letters at the bottom. */}
+      {/* Amber glow bleeding up from behind the wordmark. */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute inset-x-0 bottom-[18px] z-0 flex select-none justify-center overflow-hidden leading-none"
+        className="pointer-events-none absolute inset-x-0 bottom-[-120px] z-0 mx-auto h-[340px] w-[min(1100px,92%)]"
+        style={{
+          background:
+            "radial-gradient(ellipse at center, rgba(226,168,63,0.12), transparent 68%)",
+          filter: "blur(34px)",
+        }}
+      />
+
+      {/* Giant ghosted brand watermark — metallic gradient + slow sheen.
+          Anchored so it bleeds off the bottom edge instead of the letters
+          being clipped. */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-x-0 bottom-[10px] z-0 flex select-none justify-center overflow-hidden"
       >
-        <span
-          className="font-display font-bold text-bone/[0.035]"
-          style={{ fontSize: "clamp(72px, 15vw, 280px)", whiteSpace: "nowrap" }}
-        >
-          LynxLogic
-        </span>
+        <span className="lx-watermark">LynxLogic</span>
       </div>
     </footer>
   );

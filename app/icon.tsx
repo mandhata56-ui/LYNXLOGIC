@@ -33,7 +33,7 @@ export default function Icon() {
               width: 6,
               height: 6,
               borderRadius: "50%",
-              background: "#F0A93B",
+              background: "#E2A83F",
             }}
           />
         </div>

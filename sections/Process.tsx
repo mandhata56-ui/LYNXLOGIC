@@ -1,72 +1,60 @@
-import { FadeUp } from "@/components/FadeUp";
+import { Reveal } from "@/components/Reveal";
 
 const steps = [
   {
-    num: "01",
+    no: "01",
     title: "Discovery",
-    body: "We sit with the people who actually run the process, not just the org chart, to find where time and accuracy are being lost.",
+    desc: "We sit with the people who actually run the process, not just the org chart, to find where time and accuracy are being lost.",
   },
   {
-    num: "02",
+    no: "02",
     title: "Map the workflow",
-    body: "Every handoff, exception, and manual workaround gets documented into a single source of truth before a line of code is written.",
+    desc: "Every handoff, exception, and manual workaround gets documented into a single source of truth before a line of code is written.",
   },
   {
-    num: "03",
+    no: "03",
     title: "Build & integrate",
-    body: "Automations and systems are built against the real workflow and wired into the tools your team already uses.",
+    desc: "Automations and systems are built against the real workflow and wired into the tools your team already uses.",
   },
   {
-    num: "04",
+    no: "04",
     title: "Handover & support",
-    body: "Your team gets full visibility, documentation that holds up, and a support line for when the process changes.",
+    desc: "Your team gets full visibility, documentation that holds up, and a support line for when the process changes.",
   },
 ];
 
 export function Process() {
   return (
-    <section id="process" className="bg-bone text-obsidian">
-      <div className="mx-auto w-full max-w-[1920px] px-6 py-24 sm:px-14">
-        <FadeUp
-          as="p"
-          className="font-mono text-xs uppercase tracking-[0.14em] text-amber-deep"
-        >
-          Process
-        </FadeUp>
-        <FadeUp
-          as="h2"
-          delay={0.1}
-          className="mt-4 mb-14 max-w-[640px] font-display text-3xl font-semibold leading-[1.05] tracking-[-0.02em] sm:text-[44px]"
-        >
-          How an engagement runs, start to finish.
-        </FadeUp>
+    <Reveal
+      as="section"
+      id="process"
+      className="border-t border-bone/[0.08] py-[clamp(40px,6vw,80px)]"
+    >
+      <span className="font-mono text-[13px] tracking-[0.2em] text-amber">
+        PROCESS
+      </span>
+      <h2 className="mb-11 mt-3.5 max-w-[22ch] font-display text-[clamp(28px,4vw,46px)] font-semibold leading-[1.08] tracking-[-0.02em]">
+        How an engagement runs, start to finish.
+      </h2>
 
-        <FadeUp
-          as="div"
-          delay={0.15}
-          className="grid grid-cols-1 gap-px border border-obsidian/12 bg-obsidian/12 sm:grid-cols-2 lg:grid-cols-4"
-        >
-          {steps.map((step) => (
-            <div
-              key={step.num}
-              className="flex min-h-[230px] flex-col bg-bone px-7 pt-8 pb-10"
-            >
-              <div className="flex items-center gap-3">
-                <span className="font-display text-[40px] font-bold leading-none">
-                  {step.num}
-                </span>
-                <span aria-hidden="true" className="h-px flex-1 bg-obsidian/12" />
-              </div>
-              <h3 className="mt-7 font-display text-xl font-semibold">
-                {step.title}
-              </h3>
-              <p className="mt-2 text-[14.5px] leading-relaxed text-obsidian/66">
-                {step.body}
-              </p>
+      <div className="grid grid-cols-[repeat(auto-fit,minmax(240px,1fr))] gap-px overflow-hidden rounded-[16px] border border-bone/[0.08] bg-bone/[0.08]">
+        {steps.map((st) => (
+          <div
+            key={st.no}
+            className="relative min-h-[214px] bg-obsidian px-[26px] pb-[34px] pt-[30px]"
+          >
+            <div className="mb-5 font-display text-[44px] font-bold leading-none text-[rgba(226,168,63,.28)]">
+              {st.no}
             </div>
-          ))}
-        </FadeUp>
+            <h3 className="m-0 mb-2.5 font-display text-[19px] font-semibold">
+              {st.title}
+            </h3>
+            <p className="m-0 text-[14px] leading-[1.55] text-[#b8b3a7]">
+              {st.desc}
+            </p>
+          </div>
+        ))}
       </div>
-    </section>
+    </Reveal>
   );
 }

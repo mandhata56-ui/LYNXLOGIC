@@ -14,7 +14,7 @@ export default function ContactPage() {
   return (
     <main className="flex-1">
       <section>
-        <div className="mx-auto max-w-2xl px-6 pb-24 pt-40 sm:pb-32 sm:pt-48">
+        <div className="mx-auto max-w-2xl px-6 pb-24 pt-16 sm:pb-32 sm:pt-24">
           <FadeUp
             as="p"
             className="font-mono text-xs uppercase tracking-[0.2em] text-steel-text"

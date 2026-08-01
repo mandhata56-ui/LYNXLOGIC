@@ -33,19 +33,31 @@ export function autoReplyHtml(name: string): string {
 <td align="center" style="padding:56px 20px;">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:580px;margin:0 auto;background:#161714;border:1px solid rgba(244,241,234,0.08);border-top:3px solid #F0A93B;">
 <tr>
-<td style="padding:44px 44px 40px;">
+<td style="padding:36px 44px 40px;">
 
-<!-- eyebrow -->
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin-bottom:26px;">
+<!-- header: logo left, status right -->
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td align="left" style="vertical-align:middle;">
+<table role="presentation" cellpadding="0" cellspacing="0">
 <tr>
 <td style="vertical-align:middle;padding-right:10px;">
-<span style="display:inline-block;width:20px;height:2px;background:#F0A93B;"></span>
+<img src="https://lynxlogic.ai/apple-icon" width="30" height="30" alt="LynxLogic" style="display:block;border-radius:6px;">
 </td>
 <td style="vertical-align:middle;">
-<span style="font-family:${font};font-size:11.5px;letter-spacing:2.5px;text-transform:uppercase;color:#F0A93B;">LynxLogic · Message received</span>
+<span style="font-family:${font};font-size:18px;font-weight:700;letter-spacing:-0.3px;color:#F4F1EA;">LynxLogic</span>
 </td>
 </tr>
 </table>
+</td>
+<td align="right" style="vertical-align:middle;">
+<span style="font-family:${font};font-size:11px;letter-spacing:1.8px;text-transform:uppercase;color:#F0A93B;">Message received</span>
+</td>
+</tr>
+</table>
+
+<!-- rule under header -->
+<div style="border-top:1px solid rgba(244,241,234,0.10);margin:26px 0 32px;"></div>
 
 <!-- heading -->
 <h1 style="margin:0 0 20px;font-family:${font};font-size:32px;line-height:1.12;font-weight:700;letter-spacing:-0.6px;color:#F4F1EA;">Thanks for reaching out.</h1>
@@ -56,22 +68,7 @@ export function autoReplyHtml(name: string): string {
 <p style="margin:0 0 34px;font-family:${bodyFont};font-size:16px;line-height:1.65;color:rgba(244,241,234,0.74);">If it&rsquo;s time-sensitive, simply reply to this email &mdash; it comes straight to us.</p>
 
 <!-- divider -->
-<div style="border-top:1px solid rgba(244,241,234,0.10);margin-bottom:26px;"></div>
-
-<!-- logo lockup -->
-<table role="presentation" cellpadding="0" cellspacing="0" style="margin-bottom:14px;">
-<tr>
-<td style="vertical-align:middle;padding-right:11px;">
-<img src="https://lynxlogic.ai/apple-icon" width="36" height="36" alt="LynxLogic" style="display:block;border-radius:7px;">
-</td>
-<td style="vertical-align:middle;">
-<span style="font-family:${font};font-size:19px;font-weight:700;letter-spacing:-0.3px;color:#F4F1EA;">LynxLogic</span>
-</td>
-</tr>
-</table>
-
-<!-- tagline -->
-<p style="margin:0 0 18px;font-family:${font};font-size:13px;line-height:1.5;color:rgba(240,169,59,0.85);">We find the structure hiding in the noise.</p>
+<div style="border-top:1px solid rgba(244,241,234,0.10);margin-bottom:24px;"></div>
 
 <!-- company details -->
 <p style="margin:0;font-family:${bodyFont};font-size:12px;line-height:1.7;color:rgba(244,241,234,0.42);">
@@ -104,7 +101,6 @@ export function autoReplyText(name: string): string {
     "If it's time-sensitive, simply reply to this email — it comes straight to us.",
     "",
     "— LynxLogic",
-    "We find the structure hiding in the noise.",
     "",
     "Reliant Edge Software Solutions Pvt. Ltd.",
     "9th Floor, Tower C, Logix Cyber Park, Industrial Area Phase 2, Noida, Gautam Buddha Nagar, Uttar Pradesh 201309, India",
